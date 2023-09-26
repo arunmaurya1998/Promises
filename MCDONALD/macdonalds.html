@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        .menu {
+            margin-top: 20px;
+        }
+
+        .food-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            
+        }
+
+        .food-item label {
+            margin-left: 10px;
+        }
+
+        .order-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #d91e18;
+            color: #ffffff;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .order-btn:hover {
+            background-color: #c41210;
+        }
+
+        .order-completed {
+            margin-top: 20px;
+            text-align: center;
+            background-color: #dff0d8;
+            padding: 20px;
+            border: 1px solid #d6e9c6;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>McDonald’s Virtual Order System</h1>
+        
+        <div class="menu">
+            <h2>Menu</h2>
+            <div class="food-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsuO51UyCt3qPxhY9afK8VIiRlDXQm8GhqMg&usqp=CAU" width="100px" height="50px" alt="Burger" class="food-image">
+                <input type="checkbox" id="burger" name="burger">
+                <label for="burger">Burger</label>
+            </div>
+            
+            <div class="food-item">
+                <img src="https://images.themodernproper.com/billowy-turkey/production/posts/2022/Homemade-French-Fries_8.jpg?w=960&h=720&q=82&fm=jpg&fit=crop&dm=1662474181&s=5dd5ceda5f0fe7cad1646e5c997c32ae" width="100px" height="50px" alt="Fries" class="food-image">
+                <input type="checkbox" id="fries" name="fries">
+                <label for="fries">Fries</label>
+            </div>
+
+            <div class="food-item">
+                <img src="https://www.bigbasket.com/media/uploads/p/xxl/100401160_11-coca-cola-soft-drink-original-taste.jpg" width="100px" height="50px" alt="Coke" class="food-image">
+                <input type="checkbox" id="coke" name="coke">
+                <label for="coke">Coke</label>
+            </div>
+
+            <!-- ... Add more items as required ... -->
+
+            <button id="order-button" class="order-btn">Order Food</button>
+        </div>
+
+        <div id="hidden" class="order-completed hidden">
+            <h2>Order Completed!</h2>
+            <p>Your order number is: <span id="order-number"></span></p>
+        </div>
+    </div>
+</body>
+</html>
+<script src="macdonalds.js"></script>
